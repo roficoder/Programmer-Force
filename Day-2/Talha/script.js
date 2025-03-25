@@ -101,3 +101,99 @@ function fiboNacciSeries(num) {
 fiboNacciSeries(10);
 
 
+
+
+//Write a programme that finds the longest word from a string
+
+function longestWord(string) {
+    let longest = "";
+    let arr = string.split(" ");
+    let len = 0;
+    arr.forEach(function (word, idx) {
+        if (word.length > longest.length) {
+            longest = word;
+            len = longest.length;
+        }
+    })
+
+    console.log("The longest word is : ", longest, "with length  of : ", len);
+}
+
+
+longestWord("Ali  ap");
+
+
+
+
+/*Begginers
+1.Write a function that accepts two arguments and returns the addition
+2.Write a Programme that determines whether a number is even or odd,make function.
+3.Write a programme that accepts a number and prints its table.
+4.Write a programme that reverses a string
+5.Find the maximum number of two input numbers*/
+
+
+
+//Programme 1
+function findSum(a, b) {
+    return a + b;
+}
+
+console.log(findSum(10, 20));
+//Programme 2
+function findNature(a) {
+
+    return a % 2 === 0 ? "Even Number" : "Odd Number";
+
+}
+
+console.log(findNature(20));
+
+
+function tableOf(n) {
+let arr=[];//Storing Table Data in an array
+    for (let i = 1; i <= 10; i++) {
+      console.log(`${n} x ${i} = ${n*i}`)
+      arr.push(`${n} x ${i} = ${n*i}`);
+    }
+}
+
+console.log(tableOf(13));
+
+//Maximum Number
+
+function maxNumber(a,b){
+    if(a>b){
+        console.log(`${a} is greater than ${b}`);
+    }else{
+        console.log(`${b} is greater than ${a}`);
+    }
+}
+
+//Find the longest word from an array of string
+
+
+
+function longestString(){
+    let arr=["Hello","Talha","Kysy","Hoo"];
+    let max="";
+    let maxtwo="";
+
+    arr.forEach(function(word){
+       
+
+
+        if(word.length > max.length){
+            max=word;
+
+            if(word.length == max.length){
+                maxtwo=word;
+            }
+        }
+
+    })
+   console.log("Longest Word",max);
+    
+
+}
+longestString();
