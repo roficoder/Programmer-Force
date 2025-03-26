@@ -48,3 +48,30 @@ console.log(reverseNumber(23));
 
 
 //Problem 2
+/*Finding HCF of a two number*/
+
+
+function findHCF(a, b) {
+
+    let min;
+    //
+    if(a>b){
+        min=a;
+    }else {
+        min=b;
+    }
+    let finalAns=0;
+    for (let i = 1; i < min; i++){
+        if(a%i == 0 && b%i ==0){
+
+            finalAns=i;
+
+        }
+    }
+return finalAns
+    
+
+}
+
+console.log(findHCF(14, 36));
+
