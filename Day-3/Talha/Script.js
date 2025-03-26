@@ -31,4 +31,4 @@ function sumOfdigit(num) {
 
     return sum;
 }
-sumOfdigit();
+console.log(sumOfdigit(88));

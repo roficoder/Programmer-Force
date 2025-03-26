@@ -74,7 +74,7 @@ Make a function that accepts a string and returns its reverse form,(Don't use an
 
 function  reversedString(string){
     let reversed="";
-    for(let i = string.length; i >= 0; i--){
+    for(let i = string.length-1; i >= 0; i--){
         reversed = reversed + string[i];
     }
     return reversed;

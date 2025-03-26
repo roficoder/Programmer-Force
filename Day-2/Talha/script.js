@@ -130,7 +130,14 @@ longestWord("Ali  ap");
 2.Write a Programme that determines whether a number is even or odd,make function.
 3.Write a programme that accepts a number and prints its table.
 4.Write a programme that reverses a string
-5.Find the maximum number of two input numbers*/
+5.Find the maximum number of two input numbers
+6.Write a programme to check if a number is prime or not
+7.Find out the factorial of a number
+8.Write a function to find the largest integar in an array
+9.Write function which counts the number of vowels in a string
+10.Write a function which checks whether a string is pallindrom or not
+11.Find the second largest number store in an array
+12.Write a function to remove the duplicate valies in an array*/
 
 
 
@@ -149,51 +156,129 @@ function findNature(a) {
 
 console.log(findNature(20));
 
-
+//Programme 3
 function tableOf(n) {
-let arr=[];//Storing Table Data in an array
+    let arr = [];//Storing Table Data in an array
     for (let i = 1; i <= 10; i++) {
-      console.log(`${n} x ${i} = ${n*i}`)
-      arr.push(`${n} x ${i} = ${n*i}`);
+        console.log(`${n} x ${i} = ${n * i}`)
+        arr.push(`${n} x ${i} = ${n * i}`);
     }
 }
 
 console.log(tableOf(13));
 
-//Maximum Number
-
-function maxNumber(a,b){
-    if(a>b){
+//Programme 4
+function maxNumber(a, b) {
+    if (a > b) {
         console.log(`${a} is greater than ${b}`);
-    }else{
+    } else {
         console.log(`${b} is greater than ${a}`);
     }
 }
 
-//Find the longest word from an array of string
+//Programme 5 
+function reversedString(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
 
+    console.log("Reversed : ", reversed);
+}
+reversedString("Hello Talha Kysy hoo ap")
+//Programme 6
+function pallinDromeChecker(str) {
+    let reversed = "";
 
+    for (let i = 10; i >= 0; i--) {
+        reversed += str[i];
+    }
 
-function longestString(){
-    let arr=["Hello","Talha","Kysy","Hoo"];
-    let max="";
-    let maxtwo="";
+    if (reversed == str) {
+        console.log("True");
+    } else {
+        console.log("False");
+    }
 
-    arr.forEach(function(word){
-       
-
-
-        if(word.length > max.length){
-            max=word;
-
-            if(word.length == max.length){
-                maxtwo=word;
-            }
-        }
-
-    })
-   console.log("Longest Word",max);
-    
 
 }
-longestString();
+pallinDromeChecker("Hello Talha");
+
+
+//Programme 12
+
+function removeDuplicate(arr) {
+
+    let set = new Set(arr)
+    return [...set]
+}
+
+console.log(removeDuplicate([11, 23, 44, 11, 23, 76]));
+//Programme 12(ii)
+
+function removeDup(arr) {
+
+    return arr.filter((value, index) => {
+    if(arr.indexOf(value) === index){
+        return value;
+    }
+    })
+
+}
+console.log("Ans",removeDup([1, 3,3,5,10,45,2,3,87,23,20,18,23]));
+//Programme 8
+
+function largestNumber(number) {
+
+    let greater = 0;
+    for (let i = 0; i < number.length; i++) {
+
+        if (number[i] > greater) {
+            greater = number[i];
+        }
+
+    }
+
+    return greater;
+
+}
+console.log("Largest :", largestNumber([12, 76, 99, 100, 87, 67, 54, 32, 77]));
+//Set Two
+/*Find the longest word from an array of string by keeping following given conditions:
+1. If you could not found the maximum one then store the words of same length in an array
+2. How would you deal with empty string and symbols like ,.
+3. Also give us the number of words of same length in the string
+ */
+
+
+
+function longerWord(str) {
+    //Removing the extra symbols
+    let cleanText = str.replaceAll(",", "");
+    cleanText = cleanText.replaceAll(".", "");
+    cleanText = cleanText.replaceAll("?", "");
+    cleanText = cleanText.replaceAll(")", "");
+    cleanText = cleanText.replaceAll("(", "");
+    //Converting into an array
+    let finalArray = cleanText.split(" ");
+    //Count of repeated and longer words
+    let count = 0;
+    //Variable for storing longestWord
+    let longWord = ""
+    //Array for storing most repeated words of same length and word of maximum length
+    let longWordArr = [];
+    for (let word of finalArray) {
+        if (word.length >= longWord.length) {
+            longWord = word;
+            longWordArr.push(longWord);
+            count++;
+        }
+    }
+    console.log("Output : ", longWordArr, "Total Count : ", count);
+}
+
+longerWord("Hello. Talha Raouf Shahz Usman Rehmn Mehwish, how? am I? Do you, know mehwish(");
+
+
+
+
