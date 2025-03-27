@@ -28,6 +28,8 @@ let product=entities.map(function(word,idx){
 Find the sum of all numbers in an array 
 Find the multiplication of all numbers present in an array*/
 
+const { sortUserPlugins } = require("vite");
+
 let numbes = [3, 4, 5, 6, 7, 7];
 let n = numbes.reduce((previous, current, idx) => {
     console.log("Cuu", current);
@@ -242,3 +244,12 @@ let everOdd = everyMethod.every(function (elem, idx) {
 console.log("EveryPrime",everPrime);
 console.log("EverEven",everEven);
 console.log("EverOdd",everOdd);
+
+//Conclusion:
+/*some() method is used when,we want to check a single element of array is satisfying a given condition,if it, then breaks the loop and returns true without looping over remaining elements
+  every() method is used when, we want to check a given condition on every single element of an array,if all of the array elements satify a condition, then it returns true,  */
+
+//sort()
+/*It arranges the elements based on their ASCII value */
+let sorted=["b","c","d","a","e"];
+console.log(sorted.sort())
