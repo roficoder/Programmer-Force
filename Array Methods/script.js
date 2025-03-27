@@ -9,7 +9,8 @@ let digit=[1,2,3,4,5,6,7,8,9]
 let newArr=englith.map(function(elem,idx){
    return elem.reverse();
 })
-console.log("Origina",englith);
+
+console.log("Original",englith);
 console.log("New ARR",newArr);
 //how do  I came to know wheter an  methods modifies/or not modifies original array
 
@@ -27,8 +28,6 @@ let product=entities.map(function(word,idx){
     
 Find the sum of all numbers in an array 
 Find the multiplication of all numbers present in an array*/
-
-const { sortUserPlugins } = require("vite");
 
 let numbes = [3, 4, 5, 6, 7, 7];
 let n = numbes.reduce((previous, current, idx) => {
@@ -252,4 +251,23 @@ console.log("EverOdd",everOdd);
 //sort()
 /*It arranges the elements based on their ASCII value */
 let sorted=["b","c","d","a","e"];
-console.log(sorted.sort())
+sorted.sort();
+console.log("original",sorted);
+
+//Reverse()
+/*It reversed the element of array based on their position
+Modifies the original array  */
+
+let reverse=["Talha","Raouf","Shahzaib","AbdulRehman"];
+console.log("original",reverse);
+reverse.reverse();//All elements are reversed based on their indices
+console.log("reversed",reverse);
+
+/*join(separater)
+As the name indicates, it firstly converts an array into string , all element of
+array are converted into separted by parameter we pass as separator,
+e.g:
+*/
+reverse=["Talha","Raouf","Shahzaib","AbdulRehman"];
+let str=reverse.join("<");//Each array element will be separated by < symbol,you can use anything you want even blank space
+console.log(str);

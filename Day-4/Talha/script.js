@@ -63,9 +63,7 @@ function findHCF(a, b) {
     let finalAns=0;
     for (let i = 1; i < min; i++){
         if(a%i == 0 && b%i ==0){
-
             finalAns=i;
-
         }
     }
 return finalAns

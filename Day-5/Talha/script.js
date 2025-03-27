@@ -50,33 +50,8 @@ Algo:
  Make another loop inside the first loop and check the individual element of parent array into the forEach loop of child array,if founds true, returns it into a new array,
  Now, we have so many numbers(common Factors),but we need the smalleset no out of them,qs(How to find the smallest number in an array)
  Jugad:(I have used array.find() method to have the firstElement using condition if typeof val === 'string' returns me,)
-
-
-function findLCM(a, b) {
-    let ansone = [];//Multiples of Numberone
-    let anstwo = [];//Multiples of Numbertwo
-    //Storing Multiple of each number in two separate arrays
-    for (let i = 1; i <= 10; i++) {
-        ansone.push(a * i);
-        anstwo.push(b * i);
-    }
-    //Checking the common element in both arrays
-    let LCM = []
-    ansone.forEach(function (val, idx) {
-        anstwo.forEach(function (value) {
-            if (val === value) {
-                LCM.push(val);
-            }
-        })
-
-    })
-    let ans = LCM.find((val) => {
-        return typeof val === 'number';
-    })
-    return ans;
-}
-console.log(findLCM(8, 4));
 */
+
 
 
 
