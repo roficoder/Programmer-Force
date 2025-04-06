@@ -53,6 +53,57 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script>
+        
+let carsContainer = document.querySelector(".cars");
+let modelContainer = document.querySelector(".models");
+let showCars = document.querySelector("#cars button");
+let showModels = document.querySelector("#models button");
+let cars = [];
+let models = [];
+const myObj = {
+    name: "John",
+    age: 30,
+    cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] }
+    ]
+}
+
+myObj.cars.forEach(function (val, idx) {
+    cars.push(val.name);
+
+    myObj.cars[idx].models.forEach((value) => {
+        models.push(value);
+
+    })
+
+
+
+})
+let carsText = "<ol>";
+let modelText = "<ol>";
+showCars.addEventListener("click", function () {
+
+    cars.forEach(function (val) {
+        carsText += `<li>${val}</li>`;
+    })
+    models.forEach(function (bhai) {
+        modelText += `<li>${bhai}</li>`
+
+    })
+    carsText += '</ol>';
+    modelText += '</ol>';
+
+    carsContainer.innerHTML = carsText;
+    modelContainer.innerHTML = modelText;
+
+})
+
+
+
+
+    </script>
 </body>
 </html>
