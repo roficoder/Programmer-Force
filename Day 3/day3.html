@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Day 3</h1>
+    <script>
+        // Count the Number of Digits in a Number A simple program to count how many digits a number has. This program will take a number into a function and return the number of digits a number have. Example if 23242 is passed it should return 5
+        function countDigit(num){
+         let digits = num.toString().length;
+        console.log(digits);
+        }
+
+         countDigit(10)
+
+        //  Find the Sum of Digits of a Number A function that takes a number and returns the sum of its digits. This program will take a number and return the sum of its digits as a number. For example if 23242 is passed it will return 13.
+
+        let number = 45992;
+        sum = 0;
+let digits = number.toString().split(''); 
+console.log(digits);
+for (let digit of digits) {
+   let a = digit ; let b =0 ; 
+   sum += parseInt(digit); 
+}
+console.log(sum);
+
+
+
+    </script>
+</body>
+</html>

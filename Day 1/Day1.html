@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="number" id="input_1"  placeholder="enter 1st number">
+    <input type="number" id="input_2" placeholder="enter 2st number">
+    <input type="number" id="input_3" placeholder="enter 3st number">
+
+    <Button onclick="findMaxNumber()" class="find">Find</Button>
+    <p class="result" placeholder="result"></p>
+    <Script class="js">
+
+        // find max number from three numbers 
+        function findMaxNumber() {
+            let input_1 = Number(document.getElementById('input_1').value);
+            let input_2 = Number(document.getElementById('input_2').value);
+            let input_3 = Number(document.getElementById('input_3').value);
+            let result = document.getElementsByClassName('result')[0];
+            // R&D logic
+            let max = Math.max(input_1, input_2, input_3);
+            result.innerHTML  = `${max} is max number`;
+
+            // my personal approch 
+            if(input_1>input_2 && input_1> input_3){
+                console.log('First is Max number', input_1);
+                return
+            }
+            if(input_2>input_1 && input_2> input_3){
+                console.log('Second is max numebr',input_2);
+                return
+            }
+            if(input_3>input_1 && input_3> input_2){
+                console.log("Third is Max number", input_3);
+                return
+            }
+        }
+
+// Swap Two Variables Without Using a Third Variable
+  // R&D from MDN
+let a = 10; 
+let b = 30; 
+console.log('before swapping a', a);
+console.log("before swapping b", b);
+let tem = a ;
+a = b 
+b = tem 
+console.log("++++++++ ======== ++++++++");
+
+console.log('after swapping a', a);
+console.log("after swapping b", b);
+
+// Reverse a String - A function that takes a string and returns the reversed version.
+// with the help of MDN 
+function reverseString(str) {
+
+    let reverseArray = str.split("");
+    let joinArray = reverseArray.reverse()
+    let finalResult = joinArray.join("")
+    console.log(finalResult);
+    return str;
+}
+reverseString("HelloReverse");
+
+    </Script>
+</body>
+</html>
