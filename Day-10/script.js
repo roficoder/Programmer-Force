@@ -53,3 +53,49 @@ reversedWordChar("Hello Talha Kysy hoo")
 //Learning
 /*
 1.Converted STring to an array using logics,,and push method  */
+
+let string = "Hello&Talha*Kysy&Hoo#Tum"
+
+
+function cleanStrin(string) {
+    let cleanedString = "";
+    let str = string;
+    let word = '';
+    for (let i = 0; i <= string.length - 1; i++) {
+        console.log(i);
+        if (str[i] !== '&' && str[i] !== '*' && str[i] !== '#') {
+            word += str[i];
+        } else {
+            cleanedString += word + " ";
+            word = "";
+        }
+    }
+    cleanedString += word;
+    return cleanedString;
+
+}
+console.log(cleanStrin(string));
+
+
+//2 If two strings are anagram
+
+function checkAnagram(str, strTwo) {
+    //silent and listen
+    //Converting to an array
+    let a = "";
+    if (str.length == strTwo.length) {
+        for (let char of str) {
+            for (let s of strTwo) {
+                if (char == s) {
+                    a += char;
+        
+                    break;
+                }
+            }
+        }
+    }
+    console.log("A", a, "B", str);
+    return a == str;
+}
+console.log(checkAnagram("talha", "latha"));
+
