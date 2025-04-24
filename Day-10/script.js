@@ -88,13 +88,11 @@ function checkAnagram(str, strTwo) {
             for (let s of strTwo) {
                 if (char == s) {
                     a += char;
-        
                     break;
                 }
             }
         }
     }
-    console.log("A", a, "B", str);
     return a == str;
 }
 console.log(checkAnagram("talha", "latha"));

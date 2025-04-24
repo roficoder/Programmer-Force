@@ -1,3 +1,4 @@
+
 /*Write a programme to find the largest member of an array (using Reduce method) */
 
 function longestWord(array) {
@@ -427,60 +428,60 @@ function findIntersection(one, two) {
 console.log(findIntersection(["Ali", "Bhai", "Hoo"], ["Talha", "Bhai", "Hoo"]))
 
 function uniqueElements(arrayOne, arrayTwo) {
-  let common=[];
-  let unique=[];
-  let unqiueOne=[...new Set(arrayOne)].sort();
-  let uniqueTwo=[...new Set(arrayTwo)].sort();
+    let common = [];
+    let unique = [];
+    let unqiueOne = [...new Set(arrayOne)].sort();
+    let uniqueTwo = [...new Set(arrayTwo)].sort();
 
-    for(let elem of unqiueOne){
-        for(let elemTwo of uniqueTwo){
-            if(elem == elemTwo){
+    for (let elem of unqiueOne) {
+        for (let elemTwo of uniqueTwo) {
+            if (elem == elemTwo) {
                 common.push(elem);
             }
         }
-  }
-
-  for(let i=0; i<unqiueOne.length; i++){
-      if(unqiueOne[i] !== common[i]){
-        unique.push(unqiueOne[i]);
-      }
-  }
-  for(let i=0; i<uniqueTwo.length; i++){
-    if(uniqueTwo[i] !== common[i]){
-        unique.push(uniqueTwo[i]);
     }
-  }
+
+    for (let i = 0; i < unqiueOne.length; i++) {
+        if (unqiueOne[i] !== common[i]) {
+            unique.push(unqiueOne[i]);
+        }
+    }
+    for (let i = 0; i < uniqueTwo.length; i++) {
+        if (uniqueTwo[i] !== common[i]) {
+            unique.push(uniqueTwo[i]);
+        }
+    }
 
 
-  return unique;
+    return unique;
 
 
 }
-console.log(uniqueElements(["a", "b", "j", "i", "c","d"], ["a", "b", "d","c","k"]))
+console.log(uniqueElements(["a", "b", "j", "i", "c", "d"], ["a", "b", "d", "c", "k"]))
 
 
-function uniqElems(oneArray,twoArray){
-    let sortedOne=[...new Set(oneArray)].sort();
-    let sortedTwo=[...new Set(twoArray)].sort();
-    let common=[];
-    let different=[];
-    for(let one of sortedOne){
-        for(let two of sortedTwo){
-            if(one == two){
+function uniqElems(oneArray, twoArray) {
+    let sortedOne = [...new Set(oneArray)].sort();
+    let sortedTwo = [...new Set(twoArray)].sort();
+    let common = [];
+    let different = [];
+    for (let one of sortedOne) {
+        for (let two of sortedTwo) {
+            if (one == two) {
                 common.push(one);
             }
         }
     }
-    let sortedCommon=[...new Set(common)].sort();
+    let sortedCommon = [...new Set(common)].sort();
 
-    for(let i=0; i<sortedOne.length; i++){
-        if(sortedOne[i] !== sortedCommon[i]){
+    for (let i = 0; i < sortedOne.length; i++) {
+        if (sortedOne[i] !== sortedCommon[i]) {
             different.push(sortedOne[i]);
         }
 
     }
-    for(let i=0; i<sortedTwo.length; i++){
-        if(sortedTwo[i] !== sortedCommon[i]){
+    for (let i = 0; i < sortedTwo.length; i++) {
+        if (sortedTwo[i] !== sortedCommon[i]) {
             different.push(sortedTwo[i]);
         }
 
@@ -491,4 +492,22 @@ function uniqElems(oneArray,twoArray){
 
 }
 
-console.log(uniqElems(["Hello","Talha","Bhai","Kysy","hoo","a"],["Hello","Raouf","Bhai","Kysy","hoo","a"]));
+console.log(uniqElems(["Hello", "Talha", "Bhai", "Kysy", "hoo", "a"], ["Hello", "Raouf", "Bhai", "Kysy", "hoo", "a"]));
+
+let ans=1;
+function factorial(n) {
+
+    let rever = 1;
+   
+  
+    if (n != 0) {
+        
+      ans*=n;
+
+        factorial(n - 1);
+    }
+    return ans
+
+}
+factorial(10);
+console.log(factorial(12))

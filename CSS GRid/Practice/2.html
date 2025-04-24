@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: grid;
+            place-items: center;
+        }
+
+        .mainContainer {
+            height: 90%;
+            width: 80%;
+            border-radius: 2px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            font-size: 30px;
+            font-family: sans-serif;
+            text-transform: capitalize;
+        }
+
+        .mainContainer .header {
+            background-color: #34FF33;
+            grid-column: 1/6;
+            
+            border: 2px solid black;
+            font-family: sans-serif;
+            text-align: center;
+            place-content: center;
+        }
+
+        .mainContainer .sidebar {
+            background-color: #34FF33;
+            grid-row: 2/4;
+            text-align: center;
+            place-content: center;
+            
+            border: 2px solid black;
+
+        }
+
+        .mainContainer .contentone {
+            background-color: #34FF33;
+            grid-column: 2/6;
+          
+            text-align: center;
+            place-content: center;
+            border: 2px solid black;
+
+        }
+
+        .mainContainer .contenttwo {
+            background-color: #34FF33;
+            grid-column: 2/4;
+            border: 2px solid black;
+           
+            text-align: center;
+            place-content: center;
+        }
+
+        .mainContainer .contentthree {
+            background-color: #34FF33;
+            grid-column: 4/6;
+            border: 2px solid black;
+            text-align: center;
+            place-content: center;
+            text-transform: capitalize;
+        }
+        .mainContainer .footer{
+            grid-column:1/6;
+            background-color: #34FF33;
+            border: 2px solid black;
+            text-align: center;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- CSS GRID -->
+        <div class="header">Header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="contentone">content 1</div>
+        <div class="contenttwo">content 2</div>
+        <div class="contentthree">content 3</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+
+</html>

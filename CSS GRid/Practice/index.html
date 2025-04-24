@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+
+            height: 100vh;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            height: 80%;
+            width: 60%;
+            /* border: 2px solid black; */
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .box-1 {
+            background-color: #5D386B;
+        }
+
+        .box-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .box-2 div{
+            background-color: #93C7B1;
+        }
+         /* .box-3 {
+            background-color: cyan;
+            grid-column-start:2;
+            grid-column-end:3;
+        } */
+
+      .box-3{
+        background-color: #0EA6E9;
+        grid-column: 2/3;
+      }
+      .box-4{
+        grid-column: 1/2;
+        grid-row: 2;
+        display:grid;
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+      }
+      .box-4 div{
+        background-color: #93C7B1;
+      }
+      
+
+       @media (max-width:600px) {
+        main{
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+       }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box box-1"></div>
+        <div class="box box-2">
+            <div class="childrenone"></div>
+            <div class="childrentwo"></div>
+            <div class="childrenthree">
+            </div>
+            <div class="childrenfour"></div>
+        </div>
+        <div class="box box-3"></div>
+
+        <div class="box box-4">
+            <div class="childrenone"></div>
+            <div class="childrentwo"></div>
+            <div class="childrenthree">
+            </div>
+            <div class="childrenfour"></div>
+
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>
